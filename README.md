@@ -1,6 +1,10 @@
 # jwiringpi
 Java implements for Raspberry Pi extension GPIO control (GPIO, SPI, I2C, PWM...), based on WiringPi library.
 
+## Update
+- Added support for Orange PI boards by linking against [WiringOP](https://github.com/orangepi-xunlong/wiringOP)
+- Added interface : pwmSetMode() , pwmSetRange() , and pwmSetClock()
+
 ## Description
 The jwiringpi project is dedicated to creating an convenient and easy-to-use Java class library for Raspberry Pi extension GPIO control (GPIO, SPI, I2C, PWM...). In fact, this project provides a wrapper for WiringPi library. So in most cases, you can use it just like wiringPi library on Raspberry Pi. Fortunately, WiringPi library is preloaded in the latest Raspbian operating system, and there are no need to do any complex settings.
 
