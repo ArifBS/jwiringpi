@@ -359,6 +359,25 @@ JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_wiringPiI2CReadReg1
     return wiringPiI2CReadReg16(handle, reg);
 }
 
+
+JNIEXPORT void JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_pwmSetMode
+  (JNIEnv *env, jobject obj, jint pin, jint mode)
+{
+    pwmSetMode(pin, mode);
+}
+
+JNIEXPORT void JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_pwmSetRange
+  (JNIEnv *env, jobject obj, jint pin, jint range)
+{
+    pwmSetRange(pin, range);
+}
+
+JNIEXPORT void JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_pwmSetClock
+  (JNIEnv *env, jobject obj, jint pin, jint divisor)
+{
+    pwmSetClock(pin, divisor);
+}
+
 #ifdef __cplusplus
 }
 #endif

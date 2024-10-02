@@ -9,8 +9,9 @@ If you just want to use wiringPi library in Java environments, you can just simp
         `sudo cp libc4jwiringpi.so /usr/lib`
 
 You can also compiled the native functions with:<br />
-        `gcc -shared -I /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include -I /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include/linux  jwiringpi_JWiringPiInterfaceImpl.c -lwiringPi -lwiringPiDev -o libc4jwiringpi.so -Wall
+        `gcc -shared -I ${JAVA_HOME}/include -I ${JAVA_HOME}/include/linux  jwiringpi_JWiringPiInterfaceImpl.c -lwiringPi -lwiringPiDev -o libc4jwiringpi.so -Wall
 `
+
 
 And then cp libc4jwiringpi.so to the system library path.
 *   Note: if you don't want to copy the library to the /usr/lib, you can specify the library path before running your Java program, like:

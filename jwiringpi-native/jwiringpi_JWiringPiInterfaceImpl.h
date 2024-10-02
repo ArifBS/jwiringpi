@@ -207,6 +207,22 @@ JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_wiringPiI2CReadReg8
 JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_wiringPiI2CReadReg16
   (JNIEnv *, jobject, jint, jint);
 
+
+JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_wiringPiI2CReadReg16
+  (JNIEnv *, jobject, jint, jint);
+
+
+JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_pwmSetMode
+  (JNIEnv *, jobject, jint, jint);
+
+JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_pwmSetRange
+(JNIEnv *, jobject, jint, jint);
+
+
+JNIEXPORT jint JNICALL Java_jwiringpi_JWiringPiInterfaceImpl_pwmSetClock
+(JNIEnv *, jobject, jint, jint);
+
+
 #ifdef __cplusplus
 }
 #endif
