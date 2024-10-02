@@ -38,7 +38,8 @@ public class JWiringPiInterfaceImpl implements
     JWiringPiCoreInterface,
     JWiringPiTimingInterface,
     JWiringPiSPIInterface,
-    JWiringPiI2CInterface
+    JWiringPiI2CInterface,
+        JWiringPiPWM
 {
 
     // Implements JWiringPiSetupInterface
@@ -75,4 +76,12 @@ public class JWiringPiInterfaceImpl implements
     public native int wiringPiI2CWriteReg16 (int fd, int reg, int data);
     public native int wiringPiI2CReadReg8 (int fd, int reg);
     public native int wiringPiI2CReadReg16 (int fd, int reg);
+
+    // Implement JWiringPiPWM
+    @Override
+    public native void pwmSetMode(int pin, int value) ;
+    @Override
+    public native void pwmSetRange(int pin, int range) ;
+    @Override
+    public native void pwmSetClock(int pin, int divisor) ;
 }
